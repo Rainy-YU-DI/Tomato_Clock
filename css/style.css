@@ -1,0 +1,285 @@
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+	url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+	url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+body{
+	margin: 0;
+	background-color: #000;
+}
+#app{
+	position: relative;
+	display: block;
+	width: 1280px;
+	height: 800px;
+	background-color: #fff;
+}
+.pink{
+	position:relative;
+	display:block;
+	width:1280px;
+	height: 800px;
+	background-color: #FFEDF7;
+}
+.blue{
+	position:absolute;
+	display: inline-block;
+	right: 0px;
+	top:0px;
+	width:450px;
+	height:800px;
+	background-color: #003164;
+}
+.circle{
+	position:absolute;
+	display:inline-block;
+	left:560px;
+	top: 130px;
+	width:540px;
+	height: 540px;
+	border-radius: 540px;
+	border: 4px solid #FF4384;
+}
+.bigcircle{
+	position:absolute;
+	display:inline-block;
+	left: 50%;
+	top: 50%;
+	width:500px;
+	height: 500px;
+	margin-left: -250px;
+	margin-top: -250px;
+	border-radius: 500px;
+	background-color: #FF4384;	
+}
+.datarange{
+	position: absolute;
+	display: inline-block;
+	top:0px;
+	width:445px;
+	height: 800px;
+	left:85px;
+}
+.input{
+	position: absolute;
+	display:block;
+	width:445px;
+	height: 56px;
+	top:48px;
+	background-color: #FFFFFF;
+	border: none;
+}
+.time{
+	position: absolute;
+	display:block;
+	width:445px;
+	height:206px;
+	top:297px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	color: #FF4384;
+	font-size: 176px;
+	margin: 0px
+}
+.bigbluecircle{
+	position: relative;
+	display: inline-block;
+	top:249px;
+	width:48px;
+	height: 48px;
+	border: 2px solid #003164;
+	border-radius: 48px;
+}
+.do_new_list{
+	position: relative;
+	display: inline;
+	top:221px;
+	font-family: "Roboto";
+	font-weight: bold;
+	font-size: 24px;
+	color:#003164;	
+}
+.add_word{
+	position: absolute;
+	z-index:1;
+	display: inline-block;
+	top:67px;
+	left:101px;
+	font-family: "Roboto";
+	font-weight: bold;
+	font-style: italic;
+	font-size: 16px;
+	color:#FF4384;	
+}
+.add_word_pluse{
+	position: absolute;
+	z-index:1;
+	display: inline-block;
+	top:60px;
+	left:490px;
+	font-family: "Roboto";
+	font-weight: bold;
+	font-size: 24px;
+	color:#FF4384;
+	cursor: pointer;		
+}
+.wait_do_list_group{
+	z-index: 1;
+	position: relative;
+	display:block;
+	left:0px;
+	top:610px;
+	width:445px;
+	height:32px;
+	float: left;
+}
+.smallbluecircle{
+	position: relative;
+	display:inline-block;
+	left:0px;
+	width:24px;
+	height:24px;
+	border: 2px solid #003164;
+	border-radius:24px;
+}
+.wait_do_list{
+	position: absolute;
+	display: inline;
+	left:35px;
+	line-height: 32px;
+	font-family: "Roboto";
+	font-weight: bold;
+	font-size:16px;
+	color:#003164;	
+}
+.material-icons {
+	position: absolute;
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px; /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+	line-height: 32px;
+	left:421px;
+	color:#003164;
+	cursor: pointer;
+}
+.line{
+	z-index: 1;
+	position: absolute;
+	display:inline-block;
+	width:445px;
+	height: 20px;
+	color:;
+}
+.play_center_circle{
+	position: absolute;
+	display: inline;
+	left: 50%;
+	top: 50%;	
+}
+.material-icons_play{
+	z-index:1;
+	position: absolute;
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100px; /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+	color:white;
+	left:-50px;
+	top:-50px;
+	cursor: pointer;
+}
+.material-icons_button{
+	position: absolute;
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size:36px; /* Preferred icon size */
+	display:inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+	color:white;
+	cursor: pointer;	
+}
+.one{
+	left: 329px;
+	top:48px;
+}
+.two{
+	left: 329px;
+	top:132px;
+}
+.three{
+	left: 329px;
+	top:216px;
+}
+.POMODORO{
+	position:absolute;
+	display: block;
+	font-family: "Futura";
+	font-weight: bold;
+	left:334px;
+	top:587px;
+	margin: 0px;
+	width:24px;
+	height:192px;
+	
+}
+.word{
+	display:block;
+	font-size: 24px;
+	color:#FFFFFF;
+	transform: rotate(90deg);
+	margin: 0px;
+	width:24px;
+	height:24px;
+
+}

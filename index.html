@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/vue.js"></script>
+	<script type="text/javascript">
+		(function(){
+				window.onload=function(){
+					var app=new Vue({
+						el:"#app",
+						data:{
+							list:[
+								{w:"the second thing to do today"},
+								{w:"the third thing to do today"},
+								{w:"the forth thing to do today"}
+							],
+							show_minute:"",
+							second:25*60,
+							show:true,
+							ID00:"",
+							show_second:""		
+						},
+						methods:{
+							minutetime_play:function(){
+								this.ID00=setInterval(this.clock_caculate,1000);	
+								this.show=!this.show;
+							},
+							clock_caculate:function(){
+								if(this.second>0){
+									this.second-=1;
+									this.show_clock(this.second);
+								}
+							},
+							show_clock:function(el){
+								this.show_minute=parseInt(el/60);
+								this.show_second=el%60;
+								if(this.show_second<10){
+									this.show_second="0"+this.show_second.toString();
+								};
+								if(this.show_minute<10){
+									this.show_minute="0"+this.show_minute.toString();
+								}
+							},
+							minutetime_pause:function(){
+								this.show=!this.show;
+        						clearInterval(this.ID00);
+							}	
+						},
+                    	mounted:function(){
+                    		this.show_clock(this.second);
+                   		},
+                    	watch:{
+                    	},
+					});
+				}
+		})();
+	</script>
+</head>
+<body>
+	<div id="app">
+		<div class="pink">
+		</div>
+		<div class="blue">
+				<i class="material-icons_button one">list</i>
+				<i class="material-icons_button two">assessment</i>
+				<i class="material-icons_button three">library_music</i>
+				<div class="POMODORO">
+				<p class="word">POMODORO</p>
+				</div>		
+		</div>
+		<div type="text" class="add_word">ADD A NEW MISSION...</div>
+		<div class="add_word_pluse">+</div>
+		<div class="datarange">
+			<input class="input">
+			<div class="bigbluecircle"></div>
+			<div class="do_new_list">the First thing to do today</div>
+			<p class="time">{{show_minute}}:{{show_second}}</p>
+			<div class="wait_do_list_group" v-for="(model) in list">
+					<div class="smallbluecircle"></div>
+					<div class="wait_do_list">{{model.w}}</div>
+					<i class="material-icons">play_circle_outline</i>
+					<div class="line"></div>	
+			</div>
+
+		</div>
+		<div class="circle">
+			<div class="bigcircle"></div>
+			<div class="play_center_circle">
+			<i @click="minutetime_play" v-if="show" class="material-icons_play">play_circle_filled</i>
+			<i @click="minutetime_pause" v-if="!show" class="material-icons_play">pause_circle_filled</i>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
