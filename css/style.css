@@ -23,7 +23,11 @@ body {
   display: block;
   width: 1280px;
   height: 800px;
+<<<<<<< HEAD
   background-color: #90f5d7;
+=======
+  background-color: #d7f554;
+>>>>>>> remotes/origin/master
 }
 .blue {
   position: absolute;
